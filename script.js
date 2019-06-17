@@ -28,13 +28,59 @@
 //     main.removeEventListener("mousemove" ,dada);
 // });
 
+//
+// function f(func) {
+//
+//     console.log(func());
+// }
+// f(f1);
 
-function f() {
-    setTimeout(function() {
-        return Math.random();
-    }, 1000);
+
+// function f2(a) {
+//     console.log(a);
+// }
+// function f1(func, val) {
+//     setTimeout(function () {
+//         func(val);
+//     }, 1000);
+// }
+// f1(f2, "5");
+
+
+
+// function f(t) {
+//     console.log(t);
+// }
+// function f1(cb,t) {
+//     setTimeout(function () {
+//         cb(t);
+//     }, 1000);
+// }
+// f1(f,"ere");
+
+
+
+
+
+
+
+
+
+
+
+setTimeout(function(){
+    greet(randomGreet);
+}, 1000);
+function greet(greeting){
+    console.log(greeting);
 }
-function f1(func) {
-    console.log(func());
+
+// let greetings = ["Hello", "Bonjour", "Guten Tag"],
+    randomGreet = getRandom(greetings);
+
+function getRandom(arr){
+    return arr[Math.floor(Math.random()*arr.length)];
 }
-f1(f);
+
+
+
