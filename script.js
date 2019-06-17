@@ -75,18 +75,18 @@ function randNumb(num){
     return Math.floor(num*Math.random());
 }
 
-function f () {
+function f (rand) {
    setTimeout(function(){
-       console.log(randNumb(10));
+       console.log(randNumb(rand));
     }, 1000);
 }
 
-function f1() {
-    let x = f;
-    x();
-
+function f1(func) {
+    func();
 }
-f1();
+f1(function () {
+    f(10)
+});
 
 
 
